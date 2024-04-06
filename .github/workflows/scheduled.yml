@@ -2,7 +2,7 @@ name: Scheduled Jobs
 
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '1 * * * *'
 
 jobs:
   test_schedule:
@@ -16,7 +16,7 @@ jobs:
         with:
           repository: HwangDoHyun28/github_manager
           token: ${{ secrets.MY_GITHUB_TOKEN }}
-          path: infra-study
+          path: gihub_manager
 
       - name: Add date and push
         run: |
