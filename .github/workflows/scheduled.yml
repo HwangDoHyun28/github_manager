@@ -2,7 +2,7 @@ name: Scheduled Jobs
 
 on:
   schedule:
-    - cron: '*/1 * * * *' # 매 분마다 실행됩니다.
+    - cron: '0 0 * * *' # 매 분마다 실행됩니다.
 
 jobs:
   test_schedule:
