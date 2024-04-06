@@ -16,7 +16,7 @@ jobs:
         with:
           repository: ${{ github.repository }}
           github-token: ${{ secrets.MY_GITHUB_TOKEN }}
-          path: github_manager # 경로를 수정합니다.
+          path: github_manager
 
       - name: Add date and push
         run: |
