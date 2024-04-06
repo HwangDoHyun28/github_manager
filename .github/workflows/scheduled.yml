@@ -2,7 +2,7 @@ name: Scheduled Jobs
 
 on:
   schedule:
-    - cron: '1 * * * *'
+    - cron: '*/1 * * * *' # 매 분마다 실행됩니다.
 
 jobs:
   test_schedule:
@@ -15,8 +15,8 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: HwangDoHyun28/github_manager
-          token: ${{ secrets.MY_GITHUB_TOKEN }}
-          path: gihub_manager
+          github-token: ${{ secrets.MY_GITHUB_TOKEN }}
+          path: github_manager # 경로를 수정합니다.
 
       - name: Add date and push
         run: |
@@ -27,4 +27,3 @@ jobs:
           git config --global user.name "github-actions"
           git commit -am "Inject Date"
           git push
-
