@@ -30,7 +30,7 @@ jobs:
           cd github_manager
           date >> date.txt
           git add .
-          git config --global user.email "github-actions@github.com"
-          git config --global user.name "github-actions"
+          git config --global user.email "hdh1028@naver.com"
+          git config --global user.name "HwangDoHyun28"
           git commit -am "Inject Date"
           git push
