@@ -3,6 +3,10 @@ name: Scheduled Jobs
 on:
   schedule:
     - cron: '0 15 * * *'  # 한국 시간 기준 자정마다 실행됩니다.
+  push:
+    branches: [ source ]
+  pull_request:
+    branches: [ source ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
